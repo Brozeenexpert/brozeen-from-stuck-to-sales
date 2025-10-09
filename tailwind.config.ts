@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -84,6 +87,17 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.6s ease-out forwards",
+        "slide-up": "slideUp 0.5s ease-out",
+      },
+      backgroundImage: {
+        'gradient-hero': 'linear-gradient(135deg, hsl(142 70% 25%), hsl(142 70% 35%))',
+        'gradient-accent': 'linear-gradient(135deg, hsl(45 93% 47%), hsl(45 93% 57%))',
+      },
+      boxShadow: {
+        'soft': '0 4px 20px -2px hsl(215 25% 27% / 0.08)',
+        'medium': '0 8px 30px -4px hsl(215 25% 27% / 0.12)',
+        'gold': '0 8px 30px -4px hsl(45 93% 47% / 0.25)',
       },
     },
   },
