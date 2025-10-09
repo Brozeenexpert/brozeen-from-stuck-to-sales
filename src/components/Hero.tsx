@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { TrendingUp, Users, DollarSign } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
 import heroMockup from "@/assets/hero-mockup.jpg";
+import analyticsLaptop from "@/assets/hero-backgrounds/analytics-laptop.jpg";
+import workspaceDesk from "@/assets/hero-backgrounds/workspace-desk.jpg";
+import teamMeeting from "@/assets/hero-backgrounds/team-meeting.jpg";
+import modernOffice from "@/assets/hero-backgrounds/modern-office.jpg";
+import techBackground from "@/assets/hero-backgrounds/tech-background.jpg";
 
 const Hero = () => {
+  const backgroundImages = [analyticsLaptop, workspaceDesk, teamMeeting, modernOffice, techBackground];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
   const [timeLeft, setTimeLeft] = useState({
     days: 2,
     hours: 14,
@@ -31,6 +38,14 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const imageRotationInterval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % backgroundImages.length);
+    }, 3000); // Rotate every 3 seconds
+
+    return () => clearInterval(imageRotationInterval);
+  }, [backgroundImages.length]);
+
   const stats = [
     { icon: Users, label: "Clients Promoted", value: "1,000+" },
     { icon: TrendingUp, label: "Success Rate", value: "98%" },
@@ -39,13 +54,25 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Multi-layered Background */}
+      {/* Multi-layered Background with Rotating Images */}
       <div className="absolute inset-0 z-0">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary/80"></div>
+        {/* Rotating Background Images */}
+        {backgroundImages.map((image, index) => (
+          <div
+            key={index}
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+            style={{
+              backgroundImage: `url(${image})`,
+              opacity: currentImageIndex === index ? 1 : 0,
+            }}
+          />
+        ))}
+        
+        {/* Deep green overlay for readability */}
+        <div className="absolute inset-0 bg-primary/75"></div>
         
         {/* Animated mesh gradient overlay */}
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -left-4 w-96 h-96 bg-accent/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
           <div className="absolute top-0 -right-4 w-96 h-96 bg-primary-glow/40 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-700"></div>
           <div className="absolute -bottom-8 left-20 w-96 h-96 bg-accent/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
