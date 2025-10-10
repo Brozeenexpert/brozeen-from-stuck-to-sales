@@ -44,7 +44,7 @@ const PathSelector = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 bg-card/30 backdrop-blur-sm rounded-3xl py-12 border border-primary/10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-gold">
             Pick Your Path
