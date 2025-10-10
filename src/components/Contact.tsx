@@ -15,6 +15,7 @@ import { Calendar, MessageSquare, Mail, Clock } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,16 +23,68 @@ const Contact = () => {
     challenge: "",
     situation: ""
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    challenge: "",
+    situation: ""
+  });
+
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      email: "",
+      challenge: "",
+      situation: ""
+    };
+    
+    let isValid = true;
+    
+    if (!formData.name.trim() || formData.name.length < 2) {
+      newErrors.name = "Name must be at least 2 characters";
+      isValid = false;
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim() || !emailRegex.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+      isValid = false;
+    }
+    
+    if (!formData.challenge.trim() || formData.challenge.length < 10) {
+      newErrors.challenge = "Please describe your challenge (min 10 characters)";
+      isValid = false;
+    }
+    
+    if (!formData.situation) {
+      newErrors.situation = "Please select your current situation";
+      isValid = false;
+    }
+    
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      toast({
+        title: "Validation Error",
+        description: "Please fix the errors in the form before submitting.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
     
     // Create mailto link with form data
     const subject = encodeURIComponent(`Strategy Session Request from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n` +
+      `Phone: ${formData.phone || 'Not provided'}\n` +
       `Current Situation: ${formData.situation}\n` +
       `Challenge:\n${formData.challenge}`
     );
@@ -44,13 +97,22 @@ const Contact = () => {
     });
     
     // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      challenge: "",
-      situation: ""
-    });
+    setTimeout(() => {
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        challenge: "",
+        situation: ""
+      });
+      setErrors({
+        name: "",
+        email: "",
+        challenge: "",
+        situation: ""
+      });
+      setIsSubmitting(false);
+    }, 1000);
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -86,8 +148,11 @@ const Contact = () => {
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="John Doe"
-                    className="mt-1"
+                    className={`mt-1 ${errors.name ? 'border-destructive' : ''}`}
+                    aria-invalid={!!errors.name}
+                    aria-describedby={errors.name ? "name-error" : undefined}
                   />
+                  {errors.name && <p id="name-error" className="text-xs text-destructive mt-1">{errors.name}</p>}
                 </div>
 
                 <div>
@@ -99,8 +164,11 @@ const Contact = () => {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="john@example.com"
-                    className="mt-1"
+                    className={`mt-1 ${errors.email ? 'border-destructive' : ''}`}
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                   />
+                  {errors.email && <p id="email-error" className="text-xs text-destructive mt-1">{errors.email}</p>}
                 </div>
 
                 <div>
@@ -122,7 +190,7 @@ const Contact = () => {
                     value={formData.situation}
                     onValueChange={(value) => handleInputChange("situation", value)}
                   >
-                    <SelectTrigger className="mt-1">
+                    <SelectTrigger className={`mt-1 ${errors.situation ? 'border-destructive' : ''}`}>
                       <SelectValue placeholder="Select your situation" />
                     </SelectTrigger>
                     <SelectContent>
@@ -135,6 +203,7 @@ const Contact = () => {
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
+                  {errors.situation && <p className="text-xs text-destructive mt-1">{errors.situation}</p>}
                 </div>
 
                 <div>
@@ -145,12 +214,15 @@ const Contact = () => {
                     value={formData.challenge}
                     onChange={(e) => handleInputChange("challenge", e.target.value)}
                     placeholder="Tell me about your current challenges and what you're trying to achieve..."
-                    className="mt-1 min-h-[120px]"
+                    className={`mt-1 min-h-[120px] ${errors.challenge ? 'border-destructive' : ''}`}
+                    aria-invalid={!!errors.challenge}
+                    aria-describedby={errors.challenge ? "challenge-error" : undefined}
                   />
+                  {errors.challenge && <p id="challenge-error" className="text-xs text-destructive mt-1">{errors.challenge}</p>}
                 </div>
 
-                <Button type="submit" variant="gold" size="lg" className="w-full">
-                  Submit & Book Strategy Call
+                <Button type="submit" variant="gold" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Submit & Book Strategy Call"}
                 </Button>
               </form>
 

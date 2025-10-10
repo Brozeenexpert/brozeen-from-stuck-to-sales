@@ -101,6 +101,7 @@ const Testimonials = () => {
                     src={testimonial.image} 
                     alt={`${testimonial.name} - ${testimonial.role}`}
                     className="w-12 h-12 rounded-full object-cover border-2 border-accent/30"
+                    loading="lazy"
                   />
                   <div>
                     <p className="font-semibold text-primary">{testimonial.name}</p>

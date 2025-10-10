@@ -70,29 +70,31 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-card border-t border-border shadow-medium">
-            <div className="flex flex-col py-4 space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="px-4 py-2 text-foreground hover:bg-secondary transition-colors font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
+        <div 
+          className={`lg:hidden bg-card border-t border-border shadow-medium overflow-hidden transition-all duration-300 ${
+            isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="flex flex-col py-4 space-y-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="px-4 py-2 text-foreground hover:bg-secondary transition-colors font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <div className="px-4 pt-2">
+              <Button asChild variant="gold" size="lg" className="w-full">
+                <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
+                  Book Now
                 </a>
-              ))}
-              <div className="px-4 pt-2">
-                <Button asChild variant="gold" size="lg" className="w-full">
-                  <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
-                    Book Now
-                  </a>
-                </Button>
-              </div>
+              </Button>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
