@@ -9,6 +9,7 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Quiz from "@/components/Quiz";
+import PathSelector from "@/components/PathSelector";
 import { Button } from "@/components/ui/button";
 import { HelpCircle } from "lucide-react";
 
@@ -23,6 +24,7 @@ const Index = () => {
       <Services />
       <Results />
       <Testimonials />
+      <PathSelector />
       <FAQ />
       <Contact />
       <Footer />
