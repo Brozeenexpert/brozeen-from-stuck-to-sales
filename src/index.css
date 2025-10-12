@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 240 20% 98%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 217 91% 60%;
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 38 92% 50%;
+    --accent: 31 91% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 217 91% 60%;
+    --ring: 262 83% 58%;
 
     --radius: 1rem;
     
@@ -42,13 +42,13 @@ All colors MUST be HSL.
     --success-foreground: 0 0% 100%;
     
     /* Custom design tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%));
-    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%), hsl(48 96% 53%));
-    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
-    --shadow-soft: 0 4px 20px -2px hsl(222 47% 11% / 0.08);
-    --shadow-medium: 0 8px 30px -4px hsl(222 47% 11% / 0.12);
-    --shadow-gold: 0 10px 40px -4px hsl(38 92% 50% / 0.35);
-    --shadow-primary: 0 10px 40px -4px hsl(217 91% 60% / 0.35);
+    --gradient-hero: linear-gradient(135deg, hsl(262 83% 58%), hsl(217 91% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(31 91% 55%), hsl(38 92% 65%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(158 64% 52%));
+    --shadow-soft: 0 4px 20px -2px hsl(262 83% 58% / 0.08);
+    --shadow-medium: 0 8px 30px -4px hsl(262 83% 58% / 0.12);
+    --shadow-gold: 0 10px 40px -4px hsl(31 91% 55% / 0.4);
+    --shadow-primary: 0 10px 40px -4px hsl(262 83% 58% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
@@ -70,33 +70,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 28% 17%;
+    --background: 222 47% 11%;
     --foreground: 0 0% 100%;
 
-    --card: 215 25% 20%;
+    --card: 220 30% 15%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 215 25% 20%;
+    --popover: 220 30% 15%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 142 70% 40%;
+    --primary: 262 83% 65%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 25% 25%;
+    --secondary: 217 91% 65%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 215 25% 25%;
+    --muted: 220 30% 20%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 45 93% 50%;
-    --accent-foreground: 215 25% 17%;
+    --accent: 31 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 25% 30%;
-    --input: 215 25% 30%;
-    --ring: 142 70% 40%;
+    --border: 220 30% 25%;
+    --input: 220 30% 25%;
+    --ring: 262 83% 65%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
