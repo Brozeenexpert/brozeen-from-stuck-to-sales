@@ -21,7 +21,7 @@ const FAQ = () => {
     },
     {
       question: "How is this different from other marketing services?",
-      answer: "Unlike generic marketing agencies, I provide personalized, hands-on guidance tailored to YOUR specific situation. You're not just a number — you get direct access to me, proven strategies that actually work, and complete transparency. Plus, my track record speaks for itself with over 1,000 successful clients."
+      answer: "Unlike generic marketing agencies, I provide personalized, hands on guidance tailored to YOUR specific situation. You are not just a number. You get direct access to me, proven strategies that actually work, and complete transparency. Plus, my track record speaks for itself with over 1,000 successful clients."
     },
     {
       question: "What's included in the Done-for-You service?",
@@ -29,15 +29,15 @@ const FAQ = () => {
     },
     {
       question: "How much should I budget for advertising?",
-      answer: "It depends on your goals and current revenue. During our strategy session, we'll discuss the optimal budget for your situation. Many clients start with as little as $500-$1,000/month and scale from there as they see results. The key is ROI, not just spending."
+      answer: "It depends on your goals and current revenue. During our strategy session, we will discuss the optimal budget for your situation. Many clients start with as little as $500 to $1,000/month and scale from there as they see results. The key is ROI, not just spending."
     },
     {
       question: "Can you help with my specific industry/niche?",
-      answer: "Yes! I've successfully worked with e-commerce stores, service providers, course creators, affiliate marketers, coaches, consultants, and more. The fundamental principles of digital marketing apply across industries — I just customize the approach for your specific market and audience."
+      answer: "Yes! I have successfully worked with e commerce stores, service providers, course creators, affiliate marketers, coaches, consultants, and more. The fundamental principles of digital marketing apply across industries. I just customize the approach for your specific market and audience."
     },
     {
       question: "What happens after we start working together?",
-      answer: "First, we'll have a comprehensive strategy session to understand your goals and challenges. Then I'll create your customized action plan and begin implementation. You'll receive regular updates, performance reports, and have direct access to me for questions and adjustments. We iterate and optimize continuously for maximum results."
+      answer: "First, we will have a comprehensive strategy session to understand your goals and challenges. Then I will create your customized action plan and begin implementation. You will receive regular updates, performance reports, and have direct access to me for questions and adjustments. We iterate and optimize continuously for maximum results."
     }
   ];
 
@@ -80,7 +80,7 @@ const FAQ = () => {
               Still have questions?
             </h3>
             <p className="text-primary-foreground/90 mb-6">
-              Let's hop on a free 30-minute strategy call and discuss your specific situation
+              Let us hop on a free 30 minute strategy call and discuss your specific situation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

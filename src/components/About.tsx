@@ -74,10 +74,10 @@ const About = () => {
 
               <div className="bg-card/60 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 shadow-soft">
                 <p className="text-lg text-foreground leading-relaxed mb-4">
-                  I'm <span className="font-extrabold text-primary text-xl">Brozeen</span>, and I've cracked the code to digital marketing success. 
+                  I am <span className="font-extrabold text-primary text-xl">Brozeen</span>, and I have cracked the code to digital marketing success. 
                 </p>
                 <p className="text-lg text-foreground/90 leading-relaxed">
-                  I've helped <span className="font-bold text-accent">1,000+ entrepreneurs</span> — from 9-5 workers to affiliate marketers — 
+                  I have helped <span className="font-bold text-accent">1,000+ entrepreneurs</span> from 9 to 5 workers to affiliate marketers, 
                   break free from the struggle and build <span className="font-bold underline decoration-primary">real, sustainable income</span>. 
                 </p>
               </div>

@@ -285,7 +285,7 @@ const Contact = () => {
                 <h3 className="text-lg font-bold text-destructive mb-2">⚠️ The Cost of Waiting</h3>
                 <p className="text-foreground text-sm">
                   Every day you delay is another day of lost revenue, missed opportunities, and staying stuck. 
-                  Your competitors aren't waiting — why should you?
+                  Your competitors are not waiting. Why should you?
                 </p>
               </div>
             </div>

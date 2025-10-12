@@ -21,7 +21,7 @@ const Testimonials = () => {
       name: "James Rodriguez",
       role: "Affiliate Marketer",
       rating: 5,
-      quote: "I was stuck at $500/month for months. Brozeen's automation systems helped me scale to $5K+ consistently. Best investment I've ever made.",
+      quote: "I was stuck at $500/month for months. Brozeen's automation systems helped me scale to $5K+ consistently. Best investment I have ever made.",
       image: person2
     },
     {

@@ -107,7 +107,7 @@ const Hero = () => {
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl text-primary-foreground/95 font-medium leading-relaxed">
-              I'm <span className="font-bold text-accent drop-shadow-sm">Brozeen</span> — I've helped over 1,000 people like you turn their side hustle into a <span className="font-bold underline decoration-accent">6-figure business</span>. 
+              I am <span className="font-bold text-accent drop-shadow-sm">Brozeen</span>, and I have helped over 1,000 people like you turn their side hustle into a <span className="font-bold underline decoration-accent">6 figure business</span>. 
               No BS. No fluff. Just proven systems that work.
             </p>
 
@@ -163,7 +163,7 @@ const Hero = () => {
             <div className="bg-destructive/10 backdrop-blur-sm border-2 border-destructive/40 rounded-xl px-6 py-4 inline-block">
               <p className="text-destructive font-bold text-sm flex items-center gap-2">
                 <span className="text-xl">⚠️</span>
-                Only 3 spots left this month! Don't miss out on your transformation.
+                Only 3 spots left this month! Do not miss out on your transformation.
               </p>
             </div>
           </div>

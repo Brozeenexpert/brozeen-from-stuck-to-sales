@@ -69,7 +69,7 @@ const Services = () => {
             </h2>
             <div className="h-2 w-32 bg-gradient-accent rounded-full mx-auto mb-6"></div>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-              Choose the service that fits your goals — or let me create a <span className="font-bold text-primary">custom strategy</span> just for you.
+              Choose the service that fits your goals or let me create a <span className="font-bold text-primary">custom strategy</span> just for you.
             </p>
           </div>
 
@@ -115,7 +115,7 @@ const Services = () => {
                 Not Sure Which Service You Need?
               </h3>
               <p className="text-xl text-foreground/80 mb-8 max-w-2xl mx-auto">
-                Book a <span className="font-bold text-accent">FREE 30-minute strategy call</span> and I'll create a custom plan for your business.
+                Book a <span className="font-bold text-accent">FREE 30 minute strategy call</span> and I will create a custom plan for your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button asChild variant="gold" size="lg" className="text-lg font-bold px-10 py-7">
