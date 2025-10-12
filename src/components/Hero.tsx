@@ -93,19 +93,42 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Left Column - Text Content */}
           <div className="text-left space-y-8 animate-fade-in">
+            {/* Trust Badge */}
+            <div className="inline-flex items-center gap-2 bg-success/10 backdrop-blur-sm border border-success/30 rounded-full px-5 py-2 mb-2">
+              <span className="text-success text-2xl">✓</span>
+              <span className="text-success font-semibold text-sm">Trusted by 1,000+ Entrepreneurs</span>
+            </div>
+
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-              Turn Your Digital Skills into{" "}
-              <span className="text-gradient-gold drop-shadow-glow">$5K+ Monthly Revenue</span>{" "}
-              with Proven Promotion Strategies
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-primary-foreground leading-tight">
+              Stop Struggling.<br />
+              Start <span className="text-gradient-gold drop-shadow-glow">Earning $5K-$15K</span> Every Month
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-primary-foreground/90">
-              I'm <span className="font-semibold text-accent drop-shadow-sm">Brozeen</span>, your expert guide to digital success. 
-              Whether you're juggling a 9-5, building a side hustle, or scaling as an affiliate marketer — 
-              I help you break through the noise and achieve consistent, reliable growth.
+            <p className="text-xl md:text-2xl text-primary-foreground/95 font-medium leading-relaxed">
+              I'm <span className="font-bold text-accent drop-shadow-sm">Brozeen</span> — I've helped over 1,000 people like you turn their side hustle into a <span className="font-bold underline decoration-accent">6-figure business</span>. 
+              No BS. No fluff. Just proven systems that work.
             </p>
+
+            {/* Social Proof */}
+            <div className="flex flex-wrap gap-6 items-center">
+              <div className="flex -space-x-3">
+                {[1,2,3,4,5].map(i => (
+                  <div key={i} className="w-12 h-12 rounded-full border-4 border-primary bg-gradient-accent flex items-center justify-center text-white font-bold">
+                    {String.fromCharCode(64 + i)}
+                  </div>
+                ))}
+              </div>
+              <div className="text-primary-foreground">
+                <div className="flex gap-1 mb-1">
+                  {[1,2,3,4,5].map(i => (
+                    <span key={i} className="text-accent text-xl">★</span>
+                  ))}
+                </div>
+                <p className="text-sm font-semibold">4.9/5 from 500+ reviews</p>
+              </div>
+            </div>
 
             {/* Countdown Timer */}
             <div className="bg-card/10 backdrop-blur-md rounded-2xl p-6 border border-accent/20 shadow-2xl">
@@ -123,17 +146,25 @@ const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <Button asChild variant="gold" size="lg" className="text-lg px-10 py-7 w-full sm:w-auto shadow-gold hover:shadow-2xl transition-all duration-300">
+            <div className="flex flex-col sm:flex-row gap-5 items-start">
+              <Button asChild variant="gold" size="lg" className="text-xl font-bold px-12 py-8 w-full sm:w-auto shadow-gold hover:shadow-glow hover:scale-105 transition-all duration-300 animate-pulse">
                 <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
-                  🚀 Secure My Spot
+                  💬 Yes! I Want Results Now →
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-7 w-full sm:w-auto bg-card/10 backdrop-blur-md border-2 border-accent/40 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300">
-                <a href="#contact">
-                  Get Free Strategy Session
+              <Button asChild variant="outline" size="lg" className="text-lg font-semibold px-10 py-8 w-full sm:w-auto bg-card/10 backdrop-blur-md border-3 border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:border-primary-foreground transition-all duration-300">
+                <a href="#path-selector">
+                  📊 Show Me How It Works
                 </a>
               </Button>
+            </div>
+
+            {/* Urgency Message */}
+            <div className="bg-destructive/10 backdrop-blur-sm border-2 border-destructive/40 rounded-xl px-6 py-4 inline-block">
+              <p className="text-destructive font-bold text-sm flex items-center gap-2">
+                <span className="text-xl">⚠️</span>
+                Only 3 spots left this month! Don't miss out on your transformation.
+              </p>
             </div>
           </div>
 

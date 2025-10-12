@@ -43,64 +43,90 @@ const PathSelector = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-      <div className="container mx-auto px-4 bg-card/30 backdrop-blur-sm rounded-3xl py-12 border border-primary/10">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient-gold">
-            Pick Your Path
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Where are you right now? Choose your situation below and get personalized guidance.
-          </p>
-        </div>
+    <section id="path-selector" className="py-24 bg-gradient-to-b from-primary/5 via-accent/5 to-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="bg-card/60 backdrop-blur-lg rounded-3xl py-16 px-6 md:px-12 border-2 border-primary/20 shadow-primary">
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="inline-block bg-accent/10 border border-accent/30 rounded-full px-6 py-2 mb-6">
+              <p className="text-accent font-bold text-sm">🎯 PERSONALIZED GUIDANCE</p>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-hero bg-clip-text text-transparent">
+              Where Are You Right Now?
+            </h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+              Choose your current situation and get a <span className="font-bold text-primary">custom roadmap</span> to your $5K-$15K/month goal.
+            </p>
+          </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {paths.map((path, index) => (
             <div
               key={index}
-              className="group relative bg-card/50 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-8 hover:border-primary/40 transition-all duration-300 hover:shadow-gold hover:-translate-y-2"
+              className="group relative bg-gradient-to-br from-card via-card to-card/80 backdrop-blur-sm border-3 border-primary/30 rounded-3xl p-8 hover:border-accent hover:shadow-glow hover:-translate-y-3 transition-all duration-500 overflow-hidden"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                {path.icon}
-              </div>
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
               
-              <h3 className="text-2xl font-bold mb-4 text-foreground">
-                {path.title}
-              </h3>
+              {/* Popular badge for middle option */}
+              {index === 1 && (
+                <div className="absolute -top-4 -right-4 bg-gradient-cta text-white font-bold text-xs px-6 py-2 rounded-full shadow-gold rotate-12">
+                  🔥 MOST POPULAR
+                </div>
+              )}
               
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                {path.description}
-              </p>
-
-              <div className="space-y-3">
-                <Button
-                  onClick={() => handleWhatsApp(path.whatsappMessage)}
-                  variant="gold"
-                  className="w-full gap-2 shadow-gold"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  WhatsApp Me
-                </Button>
+              <div className="relative z-10">
+                <div className="text-6xl mb-6 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  {path.icon}
+                </div>
                 
-                <Button
-                  onClick={() => handleEmail(path.emailSubject, path.emailBody)}
-                  variant="outline"
-                  className="w-full gap-2 border-primary/30 hover:bg-primary/10"
-                >
-                  <Mail className="w-4 h-4" />
-                  Email Me
-                </Button>
+                <h3 className="text-2xl font-extrabold mb-4 text-foreground group-hover:text-primary transition-colors">
+                  {path.title}
+                </h3>
+                
+                <p className="text-muted-foreground mb-8 leading-relaxed font-medium">
+                  {path.description}
+                </p>
+
+                <div className="space-y-4">
+                  <Button
+                    onClick={() => handleWhatsApp(path.whatsappMessage)}
+                    variant="gold"
+                    className="w-full gap-2 shadow-gold hover:shadow-glow text-base font-bold py-6 group-hover:scale-105 transition-transform"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    💬 WhatsApp Now
+                  </Button>
+                  
+                  <Button
+                    onClick={() => handleEmail(path.emailSubject, path.emailBody)}
+                    variant="outline"
+                    className="w-full gap-2 border-2 border-primary/40 hover:bg-primary hover:text-primary-foreground text-base font-semibold py-6"
+                  >
+                    <Mail className="w-5 h-5" />
+                    📧 Send Email
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-sm text-muted-foreground">
-            Not sure which path? Start with any option and we'll guide you to the right solution.
-          </p>
+        <div className="text-center mt-16">
+          <div className="bg-success/10 border-2 border-success/30 rounded-2xl px-8 py-6 inline-block">
+            <p className="text-success font-bold text-lg flex items-center gap-3 justify-center">
+              <span className="text-2xl">✅</span>
+              Not sure which path? Choose any option — I'll guide you to the exact solution you need!
+            </p>
+          </div>
         </div>
+      </div>
       </div>
     </section>
   );

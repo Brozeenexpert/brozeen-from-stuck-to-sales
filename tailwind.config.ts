@@ -25,11 +25,14 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          glow: "hsl(142 70% 45%)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -92,13 +95,17 @@ export default {
         "slide-up": "slideUp 0.5s ease-out",
       },
       backgroundImage: {
-        'gradient-hero': 'linear-gradient(135deg, hsl(142 70% 25%), hsl(142 70% 35%))',
-        'gradient-accent': 'linear-gradient(135deg, hsl(45 93% 47%), hsl(45 93% 57%))',
+        'gradient-hero': 'linear-gradient(135deg, hsl(217 91% 60%), hsl(262 83% 58%))',
+        'gradient-accent': 'linear-gradient(135deg, hsl(38 92% 50%), hsl(48 96% 53%))',
+        'gradient-success': 'linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%))',
+        'gradient-cta': 'linear-gradient(135deg, hsl(38 92% 50%), hsl(25 95% 53%))',
       },
       boxShadow: {
-        'soft': '0 4px 20px -2px hsl(215 25% 27% / 0.08)',
-        'medium': '0 8px 30px -4px hsl(215 25% 27% / 0.12)',
-        'gold': '0 8px 30px -4px hsl(45 93% 47% / 0.25)',
+        'soft': '0 4px 20px -2px hsl(222 47% 11% / 0.08)',
+        'medium': '0 8px 30px -4px hsl(222 47% 11% / 0.12)',
+        'gold': '0 10px 40px -4px hsl(38 92% 50% / 0.35)',
+        'primary': '0 10px 40px -4px hsl(217 91% 60% / 0.35)',
+        'glow': '0 0 30px -5px hsl(38 92% 50% / 0.5)',
       },
     },
   },
