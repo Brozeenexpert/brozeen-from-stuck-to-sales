@@ -64,7 +64,7 @@ const About = () => {
             <div className="space-y-8">
               <div>
                 <div className="inline-block bg-primary/10 border border-primary/30 rounded-full px-5 py-2 mb-4">
-                  <p className="text-primary font-bold text-sm">💼 PROVEN TRACK RECORD</p>
+                  <p className="text-accent font-bold text-sm">💼 PROVEN TRACK RECORD</p>
                 </div>
                 <h2 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
                   From <span className="text-destructive">Struggling</span> to <span className="text-gradient-gold">$15K/Month</span>
@@ -74,7 +74,7 @@ const About = () => {
 
               <div className="bg-card/60 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 shadow-soft">
                 <p className="text-lg text-foreground leading-relaxed mb-4">
-                  I am <span className="font-extrabold text-primary text-xl">Brozeen</span>, and I have cracked the code to digital marketing success. 
+                  I am <span className="font-extrabold text-accent text-xl">Brozeen</span>, and I have cracked the code to digital marketing success. 
                 </p>
                 <p className="text-lg text-foreground/90 leading-relaxed">
                   I have helped <span className="font-bold text-accent">1,000+ entrepreneurs</span> from 9 to 5 workers to affiliate marketers, 
@@ -84,7 +84,7 @@ const About = () => {
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gradient-to-br from-primary/10 to-primary/5 border-2 border-primary/30 rounded-xl p-5 text-center hover:scale-105 transition-transform">
-                  <div className="text-4xl font-extrabold text-primary mb-2">98%</div>
+                  <div className="text-4xl font-extrabold text-accent mb-2">98%</div>
                   <div className="text-sm font-semibold text-foreground">Success Rate</div>
                 </div>
                 <div className="bg-gradient-to-br from-accent/10 to-accent/5 border-2 border-accent/30 rounded-xl p-5 text-center hover:scale-105 transition-transform">
@@ -117,7 +117,7 @@ const About = () => {
                   <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
                     <Icon className="w-7 h-7 text-accent" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-3">{benefit.title}</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
                 </div>
               );

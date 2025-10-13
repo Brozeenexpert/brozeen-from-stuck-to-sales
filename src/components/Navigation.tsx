@@ -43,7 +43,7 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="text-foreground hover:text-accent transition-colors font-medium"
               >
                 {link.name}
               </a>

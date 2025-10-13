@@ -60,7 +60,7 @@ const PathSelector = () => {
               Where Are You Right Now?
             </h2>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-              Choose your current situation and get a <span className="font-bold text-primary">custom roadmap</span> to your $5K-$15K/month goal.
+              Choose your current situation and get a <span className="font-bold text-accent">custom roadmap</span> to your $5K-$15K/month goal.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ const PathSelector = () => {
                   {path.icon}
                 </div>
                 
-                <h3 className="text-2xl font-extrabold mb-4 text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-extrabold mb-4 text-foreground group-hover:text-accent transition-colors">
                   {path.title}
                 </h3>
                 
@@ -107,7 +107,7 @@ const PathSelector = () => {
                   <Button
                     onClick={() => handleEmail(path.emailSubject, path.emailBody)}
                     variant="outline"
-                    className="w-full gap-2 border-2 border-primary/40 hover:bg-primary hover:text-primary-foreground text-base font-semibold py-6"
+                    className="w-full gap-2 border-2 border-primary/40 hover:bg-accent hover:text-accent-foreground text-base font-semibold py-6"
                   >
                     <Mail className="w-5 h-5" />
                     📧 Send Email

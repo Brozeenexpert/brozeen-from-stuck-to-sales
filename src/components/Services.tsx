@@ -69,7 +69,7 @@ const Services = () => {
             </h2>
             <div className="h-2 w-32 bg-gradient-accent rounded-full mx-auto mb-6"></div>
             <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-              Choose the service that fits your goals or let me create a <span className="font-bold text-primary">custom strategy</span> just for you.
+              Choose the service that fits your goals or let me create a <span className="font-bold text-accent">custom strategy</span> just for you.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ const Services = () => {
                     <Icon className="w-8 h-8 text-accent-foreground" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-primary mb-3">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
                   
                   <ul className="space-y-3 mb-6">

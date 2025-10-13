@@ -79,7 +79,7 @@ const Contact = () => {
     
     setIsSubmitting(true);
     
-    // Create mailto link with form data
+    // Compose Gmail URL with form data
     const subject = encodeURIComponent(`Strategy Session Request from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
@@ -88,12 +88,18 @@ const Contact = () => {
       `Current Situation: ${formData.situation}\n` +
       `Challenge:\n${formData.challenge}`
     );
-    
-    window.location.href = `mailto:brozeendigitalbiz@gmail.com?subject=${subject}&body=${body}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('brozeendigitalbiz@gmail.com')}&su=${subject}&body=${body}`;
+
+    // Try opening Gmail compose in a new tab
+    const newWin = window.open(gmailUrl, '_blank');
+    if (!newWin) {
+      // Fallback to mailto if popups are blocked
+      window.location.href = `mailto:brozeendigitalbiz@gmail.com?subject=${subject}&body=${body}`;
+    }
     
     toast({
-      title: "Opening Email Client",
-      description: "Your email client should open with the pre-filled message.",
+      title: "Opening Gmail",
+      description: "A new Gmail compose window has been opened with your details.",
     });
     
     // Reset form
@@ -125,7 +131,7 @@ const Contact = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to <span className="text-gradient-gold">Overcome Your Challenges?</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mb-6"></div>
@@ -137,7 +143,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Form */}
             <div className="bg-card rounded-2xl p-8 shadow-soft border border-border">
-              <h3 className="text-2xl font-bold text-primary mb-6">Get Started Today</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Get Started Today</h3>
               
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
@@ -236,7 +242,7 @@ const Contact = () => {
               {/* Urgency Banner */}
               <div className="bg-accent/10 border border-accent/20 rounded-xl p-6">
                 <Clock className="w-10 h-10 text-accent mb-3" />
-                <h3 className="text-xl font-bold text-primary mb-2">⏰ Spots Fill Fast – Act Now!</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">⏰ Spots Fill Fast – Act Now!</h3>
                 <p className="text-foreground mb-4">
                   I only take on a limited number of clients each month to ensure personalized attention and results. 
                   Don't miss your opportunity to transform your business.
@@ -249,7 +255,7 @@ const Contact = () => {
               {/* Calendly Placeholder */}
               <div className="bg-card rounded-xl p-8 shadow-soft border border-border text-center">
                 <Calendar className="w-16 h-16 text-accent mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-primary mb-3">Schedule Your Call</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">Schedule Your Call</h3>
                 <p className="text-muted-foreground mb-6">
                   Pick a time that works best for your 30-minute strategy session
                 </p>

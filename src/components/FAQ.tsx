@@ -47,7 +47,7 @@ const FAQ = () => {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Frequently Asked <span className="text-gradient-gold">Questions</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mb-6"></div>
@@ -64,7 +64,7 @@ const FAQ = () => {
                 value={`item-${index}`}
                 className="bg-card rounded-xl px-6 border border-border shadow-soft"
               >
-                <AccordionTrigger className="text-left font-semibold text-primary hover:text-accent">
+                <AccordionTrigger className="text-left font-semibold text-foreground hover:text-accent">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground leading-relaxed">
@@ -93,7 +93,7 @@ const FAQ = () => {
               </a>
               <a
                 href="mailto:brozeendigitalbiz@gmail.com"
-                className="inline-flex items-center justify-center px-8 py-3 bg-card text-primary font-semibold rounded-lg hover:shadow-medium transition-all border border-primary-foreground/20"
+                className="inline-flex items-center justify-center px-8 py-3 bg-card text-foreground font-semibold rounded-lg hover:shadow-medium transition-all border border-primary-foreground/20"
               >
                 Email Brozeen
               </a>

@@ -16,7 +16,7 @@ const Results = () => {
       icon: Users,
       metric: "1,000+",
       label: "Clients Successfully Promoted",
-      color: "text-primary"
+      color: "text-accent"
     },
     {
       icon: TrendingUp,
@@ -28,7 +28,7 @@ const Results = () => {
       icon: BarChart3,
       metric: "350%",
       label: "Average ROI Increase",
-      color: "text-primary"
+      color: "text-accent"
     }
   ];
 
@@ -79,7 +79,7 @@ const Results = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Proven <span className="text-gradient-gold">Track Record</span> of Success
             </h2>
             <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mb-6"></div>
@@ -95,7 +95,7 @@ const Results = () => {
               return (
                 <div key={highlight.label} className="bg-card rounded-xl p-6 shadow-soft text-center hover-lift">
                   <Icon className={`w-10 h-10 ${highlight.color} mx-auto mb-3`} />
-                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{highlight.metric}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">{highlight.metric}</div>
                   <div className="text-sm text-muted-foreground">{highlight.label}</div>
                 </div>
               );
@@ -111,7 +111,7 @@ const Results = () => {
               >
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">{study.client}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{study.client}</h3>
                     <p className="text-sm text-muted-foreground">
                       <span className="font-semibold">Challenge:</span> {study.challenge}
                     </p>

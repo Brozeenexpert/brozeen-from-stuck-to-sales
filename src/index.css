@@ -7,31 +7,31 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
+:root {
     /* Premium Dark Theme - Deep charcoal backgrounds with gold accents */
     --background: 220 15% 8%;
-    --foreground: 40 10% 96%;
+    --foreground: 40 12% 98%;
 
     --card: 220 14% 12%;
-    --card-foreground: 40 10% 96%;
+    --card-foreground: 40 12% 98%;
 
     --popover: 220 14% 12%;
-    --popover-foreground: 40 10% 96%;
+    --popover-foreground: 40 12% 98%;
 
     --primary: 220 15% 10%;
-    --primary-foreground: 40 10% 96%;
+    --primary-foreground: 40 12% 98%;
 
     --secondary: 220 12% 18%;
-    --secondary-foreground: 40 10% 96%;
+    --secondary-foreground: 40 12% 98%;
 
     --muted: 220 12% 15%;
-    --muted-foreground: 40 5% 70%;
+    --muted-foreground: 40 8% 80%;
 
     --accent: 45 90% 55%;
     --accent-foreground: 220 15% 10%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 40 10% 96%;
+    --destructive-foreground: 40 12% 98%;
 
     --border: 220 12% 20%;
     --input: 220 12% 20%;
@@ -54,50 +54,50 @@ All colors MUST be HSL.
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 220 15% 10%;
-    --sidebar-foreground: 40 10% 96%;
+    --sidebar-foreground: 40 12% 98%;
     --sidebar-primary: 45 90% 55%;
     --sidebar-primary-foreground: 220 15% 10%;
     --sidebar-accent: 220 12% 18%;
-    --sidebar-accent-foreground: 40 10% 96%;
+    --sidebar-accent-foreground: 40 12% 98%;
     --sidebar-border: 220 12% 20%;
     --sidebar-ring: 45 90% 55%;
   }
 
-  .dark {
+.dark {
     --background: 220 15% 8%;
-    --foreground: 40 10% 96%;
+    --foreground: 40 12% 98%;
 
     --card: 220 14% 12%;
-    --card-foreground: 40 10% 96%;
+    --card-foreground: 40 12% 98%;
 
     --popover: 220 14% 12%;
-    --popover-foreground: 40 10% 96%;
+    --popover-foreground: 40 12% 98%;
 
     --primary: 220 15% 10%;
-    --primary-foreground: 40 10% 96%;
+    --primary-foreground: 40 12% 98%;
 
     --secondary: 220 12% 18%;
-    --secondary-foreground: 40 10% 96%;
+    --secondary-foreground: 40 12% 98%;
 
     --muted: 220 12% 15%;
-    --muted-foreground: 40 5% 70%;
+    --muted-foreground: 40 8% 80%;
 
     --accent: 45 90% 55%;
     --accent-foreground: 220 15% 10%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 40 10% 96%;
+    --destructive-foreground: 40 12% 98%;
 
     --border: 220 12% 20%;
     --input: 220 12% 20%;
     --ring: 45 90% 55%;
     
     --sidebar-background: 220 15% 10%;
-    --sidebar-foreground: 40 10% 96%;
+    --sidebar-foreground: 40 12% 98%;
     --sidebar-primary: 45 90% 55%;
     --sidebar-primary-foreground: 220 15% 10%;
     --sidebar-accent: 220 12% 18%;
-    --sidebar-accent-foreground: 40 10% 96%;
+    --sidebar-accent-foreground: 40 12% 98%;
     --sidebar-border: 220 12% 20%;
     --sidebar-ring: 45 90% 55%;
   }
@@ -115,6 +115,12 @@ All colors MUST be HSL.
   
   html {
     scroll-behavior: smooth;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-muted-foreground;
+    opacity: 0.9;
   }
 }
 
