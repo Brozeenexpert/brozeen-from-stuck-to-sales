@@ -253,7 +253,7 @@ const Contact = () => {
                 <p className="text-muted-foreground mb-6">
                   Pick a time that works best for your 30-minute strategy session
                 </p>
-                <Button asChild variant="hero" size="lg" className="w-full">
+                <Button asChild variant="gold" size="lg" className="w-full">
                   <a href="#contact">
                     View Available Times
                   </a>

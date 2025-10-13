@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import WhyChoose from "@/components/WhyChoose";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Results from "@/components/Results";
@@ -11,7 +12,7 @@ import Footer from "@/components/Footer";
 import Quiz from "@/components/Quiz";
 import PathSelector from "@/components/PathSelector";
 import { Button } from "@/components/ui/button";
-import { HelpCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const Index = () => {
   const [quizOpen, setQuizOpen] = useState(false);
@@ -20,6 +21,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      <WhyChoose />
       <About />
       <Services />
       <Results />
@@ -29,15 +31,17 @@ const Index = () => {
       <Contact />
       <Footer />
       
-      {/* Floating Quiz Button */}
+      {/* Floating WhatsApp Button */}
       <Button
-        onClick={() => setQuizOpen(true)}
+        asChild
         variant="gold"
         size="lg"
-        className="fixed bottom-6 right-6 shadow-gold z-40 gap-2 animate-pulse"
+        className="fixed bottom-6 right-6 shadow-glow hover:shadow-gold z-50 gap-2 hover:scale-110 transition-all duration-300"
       >
-        <HelpCircle className="w-5 h-5" />
-        Take Free Quiz
+        <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
+          <MessageCircle className="w-5 h-5" />
+          Chat Now
+        </a>
       </Button>
 
       <Quiz open={quizOpen} onOpenChange={setQuizOpen} />

@@ -68,8 +68,8 @@ const Hero = () => {
           />
         ))}
         
-        {/* Deep green overlay for readability */}
-        <div className="absolute inset-0 bg-primary/75"></div>
+        {/* Dark overlay for premium readability - 35% opacity */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/85 to-background/80"></div>
         
         {/* Animated mesh gradient overlay */}
         <div className="absolute inset-0 opacity-20">
@@ -100,13 +100,13 @@ const Hero = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-primary-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-foreground leading-tight">
               Stop Struggling.<br />
-              Start <span className="text-gradient-gold drop-shadow-glow">Earning $5K-$15K</span> Every Month
+              Start <span className="text-gradient-gold drop-shadow-glow">Earning $5K to $15K</span> Every Month
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-primary-foreground/95 font-medium leading-relaxed">
+            <p className="text-xl md:text-2xl text-foreground/90 font-medium leading-relaxed">
               I am <span className="font-bold text-accent drop-shadow-sm">Brozeen</span>, and I have helped over 1,000 people like you turn their side hustle into a <span className="font-bold underline decoration-accent">6 figure business</span>. 
               No BS. No fluff. Just proven systems that work.
             </p>
@@ -147,14 +147,14 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-5 items-start">
-              <Button asChild variant="gold" size="lg" className="text-xl font-bold px-12 py-8 w-full sm:w-auto shadow-gold hover:shadow-glow hover:scale-105 transition-all duration-300 animate-pulse">
+              <Button asChild variant="gold" size="lg" className="text-xl font-bold px-12 py-8 w-full sm:w-auto shadow-glow hover:shadow-gold hover:scale-110 transition-all duration-300">
                 <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
-                  💬 Yes! I Want Results Now →
+                  💬 Get Started Now →
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg font-semibold px-10 py-8 w-full sm:w-auto bg-card/10 backdrop-blur-md border-3 border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary hover:border-primary-foreground transition-all duration-300">
-                <a href="#path-selector">
-                  📊 Show Me How It Works
+              <Button asChild variant="outline" size="lg" className="text-lg font-semibold px-10 py-8 w-full sm:w-auto bg-card/30 backdrop-blur-md border-2 border-foreground/30 text-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300">
+                <a href="#why-choose">
+                  📊 Why Choose Brozeen
                 </a>
               </Button>
             </div>
@@ -196,8 +196,8 @@ const Hero = () => {
             return (
               <div key={stat.label} className="bg-card/10 backdrop-blur-md rounded-xl p-6 border border-accent/10 shadow-soft hover-lift group">
                 <Icon className="w-12 h-12 text-accent mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                <div className="text-4xl font-bold text-primary-foreground mb-1">{stat.value}</div>
-                <div className="text-sm text-primary-foreground/70 font-medium">{stat.label}</div>
+                <div className="text-4xl font-bold text-foreground mb-1">{stat.value}</div>
+                <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
               </div>
             );
           })}

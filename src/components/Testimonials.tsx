@@ -1,12 +1,12 @@
 import { Star, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import person1 from "@/assets/testimonials/person1.jpg";
-import person2 from "@/assets/testimonials/person2.jpg";
-import person3 from "@/assets/testimonials/person3.jpg";
-import person4 from "@/assets/testimonials/person4.jpg";
-import person5 from "@/assets/testimonials/person5.jpg";
-import person6 from "@/assets/testimonials/person6.jpg";
-import person7 from "@/assets/testimonials/person7.jpg";
+import person1 from "@/assets/testimonials/real1.jpg";
+import person2 from "@/assets/testimonials/real2.jpg";
+import person3 from "@/assets/testimonials/real3.jpg";
+import person4 from "@/assets/testimonials/real4.jpg";
+import person5 from "@/assets/testimonials/real5.jpg";
+import person6 from "@/assets/testimonials/real6.jpg";
+import person7 from "@/assets/testimonials/real7.jpg";
 
 const Testimonials = () => {
   const testimonials = [
