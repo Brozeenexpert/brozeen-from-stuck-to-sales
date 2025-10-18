@@ -2,9 +2,11 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import WhyChoose from "@/components/WhyChoose";
+import Transformation from "@/components/Transformation";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Results from "@/components/Results";
+import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -22,9 +24,10 @@ const Index = () => {
       <Navigation />
       <Hero />
       <WhyChoose />
-      <About />
+      <Transformation />
       <Services />
       <Results />
+      <Pricing />
       <Testimonials />
       <PathSelector />
       <FAQ />

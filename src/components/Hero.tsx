@@ -101,14 +101,14 @@ const Hero = () => {
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-foreground leading-tight">
-              Stop Struggling.<br />
-              Start <span className="text-gradient-gold drop-shadow-glow">Earning $5K to $15K</span> Every Month
+              Escape Your 9-5.<br />
+              Build a <span className="text-gradient-gold drop-shadow-glow">$10K/Month</span> Digital Product Empire
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl text-foreground/90 font-medium leading-relaxed">
-              I am <span className="font-bold text-accent drop-shadow-sm">Brozeen</span>, and I have helped over 1,000 people like you turn their side hustle into a <span className="font-bold underline decoration-accent">6 figure business</span>. 
-              No BS. No fluff. Just proven systems that work.
+              Master Resell Rights made simple. I show you the <span className="font-bold text-accent">exact blueprint</span> to sell high-ticket digital products and keep 100% of the profits. 
+              No product creation. No fulfillment. <span className="font-bold underline decoration-accent">Just pure profit</span>.
             </p>
 
             {/* Social Proof */}
@@ -159,12 +159,20 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Urgency Message */}
-            <div className="bg-destructive/10 backdrop-blur-sm border-2 border-destructive/40 rounded-xl px-6 py-4 inline-block">
-              <p className="text-destructive font-bold text-sm flex items-center gap-2">
-                <span className="text-xl">⚠️</span>
-                Only 3 spots left this month! Do not miss out on your transformation.
-              </p>
+            {/* Guarantee Badge */}
+            <div className="flex flex-wrap gap-4 items-center">
+              <div className="bg-success/10 backdrop-blur-sm border-2 border-success/40 rounded-xl px-6 py-4">
+                <p className="text-success font-bold text-sm flex items-center gap-2">
+                  <span className="text-2xl">✓</span>
+                  30-Day Money-Back Guarantee
+                </p>
+              </div>
+              <div className="bg-destructive/10 backdrop-blur-sm border-2 border-destructive/40 rounded-xl px-6 py-4">
+                <p className="text-destructive font-bold text-sm flex items-center gap-2">
+                  <span className="text-xl">⚠️</span>
+                  Only 3 mentorship spots left this month
+                </p>
+              </div>
             </div>
           </div>
 

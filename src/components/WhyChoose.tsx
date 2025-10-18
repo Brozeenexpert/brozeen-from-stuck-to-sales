@@ -4,23 +4,23 @@ const WhyChoose = () => {
   const reasons = [
     {
       icon: Target,
-      title: "Custom Strategy Built For You",
-      description: "No cookie cutter templates. Every plan is tailored to your specific business, goals, and market position."
+      title: "Done-For-You Product Suite",
+      description: "Access premium digital products with full resell rights. No creation, no shipping, no headaches. Just sell and keep 100% profit."
     },
     {
       icon: TrendingUp,
-      title: "Real Results & Transparent Process",
-      description: "Track every metric, see every improvement. You will know exactly how your investment turns into revenue."
+      title: "Proven Sales Funnels That Convert",
+      description: "Copy my exact high-converting funnels, landing pages, and email sequences. Everything tested and optimized for maximum sales."
     },
     {
       icon: Users,
-      title: "Personal Support & Mentorship",
-      description: "Direct access to proven expertise. Get guidance, troubleshooting, and strategic advice when you need it."
+      title: "1-on-1 Mentorship & Support",
+      description: "Weekly coaching calls, private community access, and direct message support. I hold your hand until you make your first $10K."
     },
     {
       icon: Zap,
-      title: "Traffic That Converts Into Sales",
-      description: "We do not just drive clicks. We bring qualified buyers ready to invest in what you offer."
+      title: "Traffic Strategies That Actually Work",
+      description: "Learn organic and paid traffic methods that bring targeted buyers. No more posting with zero results."
     }
   ];
 

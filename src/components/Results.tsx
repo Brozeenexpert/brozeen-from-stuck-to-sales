@@ -34,40 +34,40 @@ const Results = () => {
 
   const caseStudies = [
     {
-      client: "E-commerce Store Owner",
-      challenge: "Struggling with low traffic and zero sales",
-      result: "Achieved $15K in monthly revenue within 90 days",
-      metrics: "500% increase in qualified traffic"
+      client: "Sarah M. - Former Teacher",
+      challenge: "Burned out from teaching, making $3K/month",
+      result: "Hit $12K in first 90 days selling MRR products",
+      metrics: "$47K earned in 6 months"
     },
     {
-      client: "Affiliate Marketer",
-      challenge: "Stuck at $500/month for 6 months",
-      result: "Scaled to $5,000+ monthly commissions",
-      metrics: "1000% revenue growth in 4 months"
+      client: "Marcus T. - 9-5 Worker",
+      challenge: "Tried 5 different side hustles, all failed",
+      result: "First $5K month within 60 days of starting",
+      metrics: "Quit job after 7 months, now at $18K/month"
     },
     {
-      client: "Service Provider",
-      challenge: "No consistent lead generation system",
-      result: "Built automated funnel generating 50+ leads/week",
-      metrics: "95% reduction in time spent on marketing"
+      client: "Jessica R. - Stay-at-Home Mom",
+      challenge: "Zero business experience, needed to contribute",
+      result: "Made $8,500 in month 4 working part-time hours",
+      metrics: "Now earning more than husband's salary"
     },
     {
-      client: "Digital Course Creator",
-      challenge: "Great product, no visibility",
-      result: "Launched to $23K in first month",
-      metrics: "Built email list of 5,000+ subscribers"
+      client: "David K. - Failed Course Creator",
+      challenge: "Spent $15K creating courses, made $200 total",
+      result: "Switched to MRR, hit $10K/month in 3 months",
+      metrics: "Over $80K earned in first year"
     },
     {
-      client: "Local Business Owner",
-      challenge: "Relying solely on word-of-mouth",
-      result: "Established strong online presence with consistent bookings",
-      metrics: "300% increase in monthly revenue"
+      client: "Amanda L. - Corporate Dropout",
+      challenge: "Hated corporate life, scared to leave steady paycheck",
+      result: "Built to $6K/month before quitting job",
+      metrics: "Now at $22K/month and traveling the world"
     },
     {
-      client: "Side Hustler (9-5 Job)",
-      challenge: "No time for marketing activities",
-      result: "Automated system generating $3K/month passively",
-      metrics: "Quit day job within 8 months"
+      client: "Chris P. - College Student",
+      challenge: "Broke student working 3 part-time jobs",
+      result: "First $3K month while still in school",
+      metrics: "Graduated debt-free with $45K saved"
     }
   ];
 
