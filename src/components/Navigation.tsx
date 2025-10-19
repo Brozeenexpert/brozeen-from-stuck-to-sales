@@ -49,8 +49,8 @@ const Navigation = () => {
               </a>
             ))}
             <Button asChild variant="gold" size="lg">
-              <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
-                Book Now
+              <a href="#contact">
+                Book Free Call
               </a>
             </Button>
           </div>
@@ -88,8 +88,8 @@ const Navigation = () => {
             ))}
             <div className="px-4 pt-2">
               <Button asChild variant="gold" size="lg" className="w-full">
-                <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
-                  Book Now
+                <a href="#contact">
+                  Book Free Call
                 </a>
               </Button>
             </div>

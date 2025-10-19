@@ -161,7 +161,7 @@ const Quiz = ({ open, onOpenChange }: QuizProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[600px]">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-primary">
+          <DialogTitle className="text-2xl font-bold text-foreground">
             {isEmailStep ? "Almost Done! 🎯" : "Discover Your Perfect Strategy"}
           </DialogTitle>
           <DialogDescription>
@@ -228,7 +228,7 @@ const Quiz = ({ open, onOpenChange }: QuizProps) => {
             <div className="space-y-6">
               <div className="bg-accent/10 border border-accent/20 rounded-lg p-6">
                 <CheckCircle2 className="w-12 h-12 text-accent mb-3" />
-                <h3 className="text-xl font-bold text-primary mb-2">
+                <h3 className="text-xl font-bold text-foreground mb-2">
                   Your Personalized Strategy is Ready!
                 </h3>
                 <p className="text-muted-foreground">

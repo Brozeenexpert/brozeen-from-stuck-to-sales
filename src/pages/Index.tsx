@@ -13,6 +13,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Quiz from "@/components/Quiz";
 import PathSelector from "@/components/PathSelector";
+import TrustBar from "@/components/TrustBar";
+import WhatYouGet from "@/components/WhatYouGet";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 
@@ -22,8 +24,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
+      <TrustBar />
       <Hero />
       <WhyChoose />
+      <WhatYouGet />
       <Transformation />
       <Services />
       <Results />

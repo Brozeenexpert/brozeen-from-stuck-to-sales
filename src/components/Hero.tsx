@@ -8,6 +8,13 @@ import teamMeeting from "@/assets/hero-backgrounds/team-meeting.jpg";
 import modernOffice from "@/assets/hero-backgrounds/modern-office.jpg";
 import techBackground from "@/assets/hero-backgrounds/tech-background.jpg";
 
+import AvatarGroup from "@/components/AvatarGroup";
+import real1 from "@/assets/testimonials/real1.jpg";
+import real2 from "@/assets/testimonials/real2.jpg";
+import real3 from "@/assets/testimonials/real3.jpg";
+import real4 from "@/assets/testimonials/real4.jpg";
+import real5 from "@/assets/testimonials/real5.jpg";
+
 const Hero = () => {
   const backgroundImages = [analyticsLaptop, workspaceDesk, teamMeeting, modernOffice, techBackground];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -113,14 +120,8 @@ const Hero = () => {
 
             {/* Social Proof */}
             <div className="flex flex-wrap gap-6 items-center">
-              <div className="flex -space-x-3">
-                {[1,2,3,4,5].map(i => (
-                  <div key={i} className="w-12 h-12 rounded-full border-4 border-primary bg-gradient-accent flex items-center justify-center text-white font-bold">
-                    {String.fromCharCode(64 + i)}
-                  </div>
-                ))}
-              </div>
-              <div className="text-primary-foreground">
+              <AvatarGroup images={[real1, real2, real3, real4, real5]} />
+              <div className="text-foreground">
                 <div className="flex gap-1 mb-1">
                   {[1,2,3,4,5].map(i => (
                     <span key={i} className="text-accent text-xl">★</span>
@@ -132,14 +133,14 @@ const Hero = () => {
 
             {/* Countdown Timer */}
             <div className="bg-card/10 backdrop-blur-md rounded-2xl p-6 border border-accent/20 shadow-2xl">
-              <p className="text-sm font-semibold text-accent mb-4 tracking-wide">⚡ LIMITED SPOTS AVAILABLE - OFFER EXPIRES IN:</p>
+              <p className="text-sm font-semibold text-accent mb-4 tracking-wide">⚡ Mentorship enrollment closes in:</p>
               <div className="grid grid-cols-4 gap-3">
                 {Object.entries(timeLeft).map(([unit, value]) => (
                   <div key={unit} className="text-center">
                     <div className="bg-gradient-to-br from-accent via-accent/90 to-accent/80 text-accent-foreground rounded-xl p-3 md:p-4 text-2xl md:text-3xl font-bold shadow-gold transform hover:scale-105 transition-transform">
                       {value.toString().padStart(2, '0')}
                     </div>
-                    <p className="text-xs mt-2 text-primary-foreground/80 uppercase font-medium">{unit}</p>
+                    <p className="text-xs mt-2 text-foreground/80 uppercase font-medium">{unit}</p>
                   </div>
                 ))}
               </div>
@@ -148,8 +149,8 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-5 items-start">
               <Button asChild variant="gold" size="lg" className="text-xl font-bold px-12 py-8 w-full sm:w-auto shadow-glow hover:shadow-gold hover:scale-110 transition-all duration-300">
-                <a href="https://wa.me/2349055898060" target="_blank" rel="noopener noreferrer">
-                  💬 Get Started Now →
+                <a href="#contact">
+                  🚀 Book Free Strategy Call →
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg font-semibold px-10 py-8 w-full sm:w-auto bg-card/30 backdrop-blur-md border-2 border-foreground/30 text-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all duration-300">

@@ -67,7 +67,7 @@ const Testimonials = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Success Stories That <span className="text-gradient-gold">Speak Volumes</span>
             </h2>
             <div className="h-1 w-20 bg-gradient-accent rounded-full mx-auto mb-6"></div>
@@ -104,7 +104,7 @@ const Testimonials = () => {
                     loading="lazy"
                   />
                   <div>
-                    <p className="font-semibold text-primary">{testimonial.name}</p>
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ const Testimonials = () => {
           {/* Video Testimonials Placeholder */}
           <div className="bg-secondary/30 rounded-2xl p-8 text-center border border-border">
             <Play className="w-16 h-16 text-accent mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-primary mb-3">Video Success Stories</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-3">Video Success Stories</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Watch real clients share their transformation journeys and results in their own words
             </p>
